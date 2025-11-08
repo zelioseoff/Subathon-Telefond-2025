@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #001F3F;
+  color: #FFFFFF;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ----- BANNIÈRE ----- */
+.banner img {
+  width: 100%;           /* prend toute la largeur de l'écran */
+  max-height: 250px;     /* limite la hauteur pour éviter qu'elle soit trop grande */
+  object-fit: cover;     /* recadre l'image sans la déformer */
+  border-radius: 10px;   /* optionnel : arrondir légèrement les coins */
+  box-shadow: 0 0 20px #00FFFF; /* effet néon léger */
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001a35;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 15px #00FFFF;
+}
+
+.logo {
+  color: #00FFFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+/* ---- HEADER ---- */
+.header-text {
+  padding: 2rem;
+}
+
+h1 {
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #FFD700;
+  margin-top: 2rem;
+}
+
+
+p {
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#timer-display {
+  font-size: 3rem;
+  color: #00FFFF;
+  text-shadow: 0 0 15px #00FFFF;
+  margin: 1rem 0;
+}
+
+.don-btn {
+  display: inline-block;
+  background-color: #00FFFF;
+  color: #001F3F;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00FFFF;
+  transition: 0.3s ease;
+}
+
+.don-btn:hover {
+  background-color: #FFD700;
+  box-shadow: 0 0 20px #FFD700;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  border-top: 1px solid #00FFFF;
+  font-size: 0.9rem;
+  color: #FFD700;
+}
