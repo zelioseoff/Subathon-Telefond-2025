@@ -156,10 +156,18 @@ footer {
 
 
 /* ----- BANNIÈRE ----- */
-.banner img {
-  width: 100%;           /* prend toute la largeur de l'écran */
-  max-height: 250px;     /* limite la hauteur pour éviter qu'elle soit trop grande */
-  object-fit: cover;     /* recadre l'image sans la déformer */
-  border-radius: 10px;   /* optionnel : arrondir légèrement les coins */
-  box-shadow: 0 0 20px #00FFFF; /* effet néon léger */
+.banner {
+  width: 100%;
+  overflow: hidden; /* Empêche le dépassement de l'image */
+  margin: 1rem 0;
+  border-radius: 10px; /* optionnel pour coins arrondis */
+  box-shadow: 0 0 15px #00FFFF; /* légère lueur néon */
 }
+
+.banner img {
+  width: 100%;
+  max-height: 180px; /* Limite la hauteur de la bannière */
+  object-fit: cover;  /* recadre l'image sans la déformer */
+  display: block;
+}
+
