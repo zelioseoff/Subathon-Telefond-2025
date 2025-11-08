@@ -1,0 +1,151 @@
+/* ----- STYLE GLOBAL ----- */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #001F3F;
+  color: #FFFFFF;
+  text-align: center;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 25% 25%, rgba(0,255,255,0.05) 0%, transparent 40%),
+                    radial-gradient(circle at 75% 75%, rgba(255,215,0,0.05) 0%, transparent 40%);
+  animation: moveBackground 20s linear infinite;
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001a35;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 20px #00FFFF;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #00FFFF;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px #00FFFF;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+/* ----- HEADER ----- */
+.header-text {
+  padding: 2rem 1rem;
+}
+
+.header-text h1 {
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF;
+  font-size: 2.2rem;
+  animation: glow 1.5s infinite alternate;
+}
+
+.header-text .subtitle {
+  color: #FFD700;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 10px #FFD700;
+}
+
+/* ----- ANIMATIONS ----- */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #00FFFF, 0 0 20px #FFD700; }
+  100% { text-shadow: 0 0 25px #00FFFF, 0 0 40px #FFD700; }
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0% 0%, 100% 100%; }
+  50% { background-position: 100% 0%, 0% 100%; }
+  100% { background-position: 0% 0%, 100% 100%; }
+}
+
+/* ----- SOCIALS GRID ----- */
+.socials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ----- CARDS RESEAUX ----- */
+.social-card {
+  background-color: rgba(0, 31, 63, 0.8);
+  border: 2px solid #00FFFF;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,255,255,0.15) 0%, transparent 70%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.social-card:hover::before {
+  opacity: 1;
+}
+
+.social-card:hover {
+  transform: translateY(-10px) scale(1.08) rotateZ(1deg);
+  box-shadow: 0 0 30px #00FFFF, 0 0 50px rgba(255,255,255,0.3);
+}
+
+/* ----- COULEURS SPECIFIQUES ----- */
+.tiktok { border-color: #69C9D0; box-shadow: 0 0 15px rgba(105,201,208,0.5); }
+.tiktok:hover { box-shadow: 0 0 25px #69C9D0; }
+
+.youtube { border-color: #FF0000; box-shadow: 0 0 15px rgba(255,0,0,0.5); }
+.youtube:hover { box-shadow: 0 0 25px #FF0000; }
+
+.twitter { border-color: #1DA1F2; box-shadow: 0 0 15px rgba(29,161,242,0.5); }
+.twitter:hover { box-shadow: 0 0 25px #1DA1F2; }
+
+/* ----- FOOTER ----- */
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  border-top: 1px solid #00FFFF;
+  font-size: 0.9rem;
+  color: #FFD700;
+}
